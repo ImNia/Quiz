@@ -26,7 +26,7 @@ class QuizViewModel : ViewModel() {
     fun checkAnswer(index: Int) {
         if (fakeImage.get(index - 1) == questions.get(currentQuestion - 1).image) {
             rightAnswer++
-            questions.get(currentQuestion).correctAnswer = true
+            questions.get(currentQuestion - 1).correctAnswer = true
         }
         getQuestion()
     }
